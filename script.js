@@ -101,9 +101,13 @@ function initCarousel() {
             </div>
         `;
         
-        // Add click event for zoom
-        carouselItem.addEventListener('click', function() {
+        // Add hover events for zoom preview
+        carouselItem.addEventListener('mouseenter', function() {
             showZoomPreview(item);
+        });
+
+        carouselItem.addEventListener('mouseleave', function() {
+            closeZoom();
         });
 
         carouselContainer.appendChild(carouselItem);
